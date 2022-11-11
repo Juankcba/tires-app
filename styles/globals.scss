@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.navegacion {
+  background: #141414;
+  max-height: 50px;
+  .nextui-navbar-container {
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    background: transparent;
+    li {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #f9f9f9;
+    }
+  }
+}
+
+.link-secondary {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: rgba(20, 20, 20, 0.7);
+  text-transform: capitalize;
+}
+.container-bg {
+  width: 100%;
+  height: 646px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.81) 0%,
+      rgba(255, 255, 255, 0.855) 0.01%,
+      rgba(255, 255, 255, 0.9) 47.92%,
+      rgba(255, 255, 255, 0.855) 100%
+    ),
+    url("/img/bg-img.png");
+}
+
+.title-home {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 31px;
+  line-height: 36px;
+  color: #141414;
+  margin-bottom: 0;
+}
+
+.subtitle-home {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: #fb7c35;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.p-home {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #141414;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #fb7c35 0%, #fb6535 100%);
+  border-radius: 50px;
+  width: 220px;
+  height: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
