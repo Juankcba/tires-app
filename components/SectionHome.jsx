@@ -4,7 +4,7 @@ import NavbarSecondary from "./NavbarSecondary";
 
 const SectionHome = () => {
   return (
-    <Container fluid class="container-bg">
+    <Container fluid className="container-bg">
       <NavbarSecondary />
       <Grid.Container
         css={{

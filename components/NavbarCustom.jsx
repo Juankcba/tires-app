@@ -9,7 +9,7 @@ import {
   Dropdown,
 } from "@nextui-org/react";
 const NavbarCustom = () => {
-  const [languaje, setLanguaje] = useState(new Set(["en"]));
+  const [languaje, setLanguaje] = useState(["en"]);
 
   const selectedValue = useMemo(
     () => Array.from(languaje).join(", ").replaceAll("_", " "),
