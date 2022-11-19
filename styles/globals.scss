@@ -16,6 +16,12 @@ body {
     max-height: 50px;
     min-height: 50px;
     background: transparent;
+    @media screen and (max-width: 960px) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      background: #fa1519;
+    }
     li {
       font-family: "Poppins";
       font-style: normal;
@@ -38,8 +44,11 @@ body {
 }
 .container-bg {
   width: 100%;
-  height: 646px;
+  height: 775px;
+  padding: 0;
+  margin: 0;
 
+  max-width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
@@ -50,6 +59,17 @@ body {
       rgba(255, 255, 255, 0.855) 100%
     ),
     url("/img/bg-img.png");
+
+  @media screen and (min-width: 960px) {
+    height: 646px;
+
+    padding: 50px 0 0 0;
+  }
+  .tires-img {
+    @media screen and (max-width: 353px) {
+      display: none;
+    }
+  }
 }
 
 .title-home {
@@ -69,7 +89,7 @@ body {
   font-size: 31px;
   line-height: 31px;
   text-transform: uppercase;
-  color: #fb7c35;
+  color: #fa1519;
   margin-bottom: 20px;
   max-width: 320px;
 }
@@ -85,9 +105,9 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #fb7c35 0%, #fb6535 100%);
+  background: linear-gradient(90deg, #fa1519 0%, #511f10 100%);
   border-radius: 50px;
-  width: 220px;
+  width: 100%;
   height: 50px;
   font-family: "Roboto";
   font-style: normal;
@@ -97,4 +117,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #f9f9f9;
+  @media screen and (min-width: 960px) {
+    width: 220px;
+  }
 }

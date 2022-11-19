@@ -12,9 +12,22 @@ import { UiContext } from "../context/ui";
 const NavbarCustom = () => {
   const { language, setLanguage } = useContext(UiContext);
 
+  const collapseItems = [
+    "Features",
+    "Customers",
+    "Pricing",
+    "Company",
+    "Legal",
+    "Team",
+    "Help & Feedback",
+    "Login",
+    "Sign Up",
+  ];
+
   return (
     <Navbar variant="sticky" className="navegacion">
-      <Navbar.Content hideIn="xs" variant="underline" css={{ maxH: "50px" }}>
+      <Navbar.Toggle aria-label="toggle navigation" css={{ color: "white" }} />
+      <Navbar.Content hideIn="sm" variant="underline" css={{ maxH: "50px" }}>
         <Navbar.Link href="tel: (787)279-1555" css={{ gap: "10px" }}>
           <Image
             src="/icons/phone.svg"
@@ -42,7 +55,7 @@ const NavbarCustom = () => {
         </Navbar.Link>
       </Navbar.Content>
 
-      <Navbar.Content hideIn="xs" variant="underline">
+      <Navbar.Content hideIn="sm" variant="underline">
         <Dropdown>
           <Dropdown.Button flat css={{ "&:hover": { color: "white" } }}>
             {language == "en" ? "English" : "Español"}
@@ -62,6 +75,21 @@ const NavbarCustom = () => {
           </Dropdown.Menu>
         </Dropdown>
       </Navbar.Content>
+      <Navbar.Collapse css={{ top: "50px" }}>
+        {collapseItems.map((item, index) => (
+          <Navbar.CollapseItem key={item}>
+            <Link
+              color="inherit"
+              css={{
+                minWidth: "100%",
+              }}
+              href="#"
+            >
+              {item}
+            </Link>
+          </Navbar.CollapseItem>
+        ))}
+      </Navbar.Collapse>
     </Navbar>
   );
 };

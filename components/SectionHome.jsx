@@ -10,26 +10,77 @@ const SectionHome = () => {
       <NavbarSecondary />
       <Grid.Container
         css={{
-          display: "flex",
-          alignContent: "flex-end",
-          height: "85%",
+          "@smMin": {
+            maxW: "1200px",
+            margin: "0 auto",
+          },
         }}
       >
-        <Grid sm={6}>
-          <Image
-            src={"/img/tires.png"}
-            alt="imagen de tires"
-            width={626}
-            height={414}
-            css={{ pt: "70px" }}
-          />
+        <Grid xs={12} sm={6} css={{ order: 2, "@smMin": { order: 1 } }}>
+          <Row
+            css={{
+              width: "100%",
+              height: "100%",
+              m: "35px 0 0 auto",
+              p: 0,
+              maxWidth: "318px",
+              "@smMin": {
+                display: "none",
+              },
+            }}
+            className="tires-img"
+          >
+            <Image
+              src={"/img/tires-mobile.png"}
+              alt="imagen de tires"
+              width={"100%"}
+              height={211}
+              objectFit="contain"
+            />
+          </Row>
+          <Row
+            css={{
+              width: "100%",
+              height: "100%",
+              margin: "92px auto 0",
+              "@smMax": {
+                display: "none",
+              },
+            }}
+          >
+            <Image
+              src={"/img/tires.png"}
+              alt="imagen de tires"
+              width={"100%"}
+              height={414}
+              objectFit="contain"
+              objectPosition="center"
+            />
+          </Row>
         </Grid>
-        <Grid sm={6}>
+        <Grid
+          xs={12}
+          sm={6}
+          css={{
+            order: 1,
+            padding: "20px 25px ",
+
+            height: "fit-content",
+            "@smMin": { order: 2 },
+          }}
+        >
           <Row
             css={{
               display: "flex",
               flexDirection: "column",
-              maxWidth: "432px",
+              maxWidth: "320px",
+              width: "100%",
+              margin: "0 auto",
+              "@smMin": {
+                justifyContent: "center",
+                alignItems: "center",
+                maxWidth: "432px",
+              },
             }}
           >
             <Text h1 className="title-home">
