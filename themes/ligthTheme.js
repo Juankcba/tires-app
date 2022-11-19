@@ -5,19 +5,18 @@ export const lightTheme = createTheme({
   theme: {
     colors: {
       // brand colors
-      primaryLight: "$orange200",
-      primaryLightHover: "$orange300",
-      primaryLightActive: "$orange400",
-      primaryLightContrast: "$orange600",
+      primaryLight: "$red200",
+      primaryLightHover: "$red300",
+      primaryLightActive: "$red400",
+      primaryLightContrast: "$red600",
       primary: "#4ADE7B",
-      primaryBorder: "$orange500",
-      primaryBorderHover: "$orange600",
-      primarySolidHover: "$orange700",
+      primaryBorder: "$red500",
+      primaryBorderHover: "$red600",
+      primarySolidHover: "$red700",
       primarySolidContrast: "$white",
-      primaryShadow: "$orange500",
+      primaryShadow: "$red500",
 
-      gradient:
-        "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
+      gradient: "linear-gradient(115.46deg, #FA1519 27.4%, #2F0604 78.94%);",
       link: "#f9f9f9",
 
       // you can also create your own color

@@ -12,7 +12,7 @@ const NavbarSecondary = () => {
       }}
     >
       <div>
-        <Image src={"/img/logo.png"} alt={"logo"} width={150} height={99} />
+        <Image src={"/img/logo.svg"} alt={"logo"} width={150} height={99} />
       </div>
       <Grid.Container css={{ gap: "30px", maxW: "374px" }}>
         <Grid>

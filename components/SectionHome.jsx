@@ -1,8 +1,10 @@
 import { Button, Container, Grid, Image, Row, Text } from "@nextui-org/react";
-import React from "react";
+import React, { useContext } from "react";
+import { UiContext } from "../context/ui";
 import NavbarSecondary from "./NavbarSecondary";
 
 const SectionHome = () => {
+  const { language } = useContext(UiContext);
   return (
     <Container fluid className="container-bg">
       <NavbarSecondary />
@@ -31,18 +33,17 @@ const SectionHome = () => {
             }}
           >
             <Text h1 className="title-home">
-              Used Tires
+              {language == "en" ? "Used Tires" : "Gomas usadas"}
             </Text>
             <Text h2 className="subtitle-home">
-              At very Affordable Prices
+              {lagunage == "en"
+                ? "At very Affordable Prices"
+                : "A precios muy accesibles"}
             </Text>
             <Text className="p-home">
-              Without tires, no travel by car or motorbike. Vehicle tires must
-              be in good condition and suitable for the type of road. When the
-              time comes to change them, sometimes even in an emergency if you
-              have a flat tire, you often have to seek a tire sales professional
-              quickly. We would like him to be able to offer us a wide range of
-              tires at reasonable prices.
+              {lagunage == "en"
+                ? "Without tires, no travel by car or motorbike. Vehicle tires must be in good condition and suitable for the type of road. When the time comes to change them, sometimes even in an emergency if you have a flat tire, you often have to seek a tire sales professional quickly. We would like him to be able to offer us a wide range of tires at reasonable prices."
+                : "Sin neumáticos, no hay viajes en coche o moto. Los neumáticos del vehículo deben estar en buen estado y adecuados al tipo de carretera. Cuando llega el momento de cambiarlos, a veces incluso en una emergencia si tiene un neumático pinchado, a menudo tiene que buscar un profesional de ventas de neumáticos rápidamente. Nos gustaría que pudiera ofrecernos una amplia gama de neumáticos a precios razonables."}
             </Text>
             <Button className="btn-primary">Contact us</Button>
           </Row>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useContext } from "react";
 import {
   Navbar,
   Button,
@@ -8,13 +8,9 @@ import {
   Image,
   Dropdown,
 } from "@nextui-org/react";
+import { UiContext } from "../context/ui";
 const NavbarCustom = () => {
-  const [languaje, setLanguaje] = useState(["en"]);
-
-  const selectedValue = useMemo(
-    () => Array.from(languaje).join(", ").replaceAll("_", " "),
-    [languaje]
-  );
+  const { language, setLanguage } = useContext(UiContext);
 
   return (
     <Navbar variant="sticky" className="navegacion">
@@ -47,18 +43,18 @@ const NavbarCustom = () => {
       </Navbar.Content>
 
       <Navbar.Content hideIn="xs" variant="underline">
-        <Dropdown onChange={(e) => console.log(e)}>
+        <Dropdown>
           <Dropdown.Button flat css={{ "&:hover": { color: "white" } }}>
-            {selectedValue == "en" ? "English" : "Español"}
+            {language == "en" ? "English" : "Español"}
           </Dropdown.Button>
           <Dropdown.Menu
             aria-label="Static Actions"
             disallowEmptySelection
             selectionMode="single"
-            selectedKeys={languaje}
-            onSelectionChange={setLanguaje}
+            selectedKeys={language}
+            onSelectionChange={setLanguage}
             css={{
-              bg: "linear-gradient(to right, #FB7C35, #FB6535)",
+              bg: "linear-gradient(115.46deg, #FA1519 27.4%, #2F0604 78.94%);",
             }}
           >
             <Dropdown.Item key="en">English</Dropdown.Item>
